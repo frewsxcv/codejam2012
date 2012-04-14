@@ -1,9 +1,9 @@
 var readFile = require('fs').readFile;
 
 var buildMap = function (callback) {
-    readFile('input.txt', 'ascii', function (err, input) {
+    readFile('map.in', 'ascii', function (err, input) {
         if (err) throw err;
-        readFile('output.txt', 'ascii', function (err, output) {
+        readFile('map.out', 'ascii', function (err, output) {
             var ndx, map = {};
             if (err) throw err;
             for (ndx = 0; ndx < input.length; ndx++) {
@@ -17,7 +17,7 @@ var buildMap = function (callback) {
 };
 
 buildMap(function (map) {
-    readFile('A-small-attempt1.in', 'ascii', function (err, data) {
+    readFile('input.in', 'ascii', function (err, data) {
         var ndx, output = '', count = 1;
         for (ndx = 2; ndx < data.length; ndx++) {
             output += map[data[ndx]];
