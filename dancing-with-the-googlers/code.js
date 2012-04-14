@@ -21,7 +21,7 @@ Line.prototype.getCount = function () {
     return count;
 };
 
-readFile('sample.in', 'ascii', function (err, input) {
+readFile('input.in', 'ascii', function (err, input) {
     var ndx, lines, line, count, caseNum = 1;
     lines = input.split('\n');
     lines = lines.splice(1, lines.length - 2);
